@@ -12,19 +12,21 @@ class ViewController: UIViewController {
 
     
     // scene 1 elements
+  
+    @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var howManyTaps: UITextField!
     @IBOutlet weak var logoImg: UIImageView!
-    @IBOutlet weak var howManyTapsField: UITextField!
-    @IBOutlet weak var playButton: UIImageView!
     
     //scene 2 elements
     @IBOutlet weak var tapsButton: UIImageView!
-    @IBOutlet weak var tapLogo: UILabel!
+    @IBOutlet weak var tapsTxt: UILabel!
+  
     
     @IBAction func onPlayBtnPressed(sender: UIButton!) {
         logoImg.isHidden = true
         playButton.isHidden = true
-        howManyTapsField.isHidden = true
-        tapLogo.isHidden = false
+        howManyTaps.isHidden = true
+        tapsTxt.isHidden = false
         tapsButton.isHidden = false
     }
     

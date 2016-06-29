@@ -20,14 +20,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="retrobg" translatesAutoresizingMaskIntoConstraints="NO" id="lR9-S1-USZ"/>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tapper" translatesAutoresizingMaskIntoConstraints="NO" id="TfY-WI-yfs">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tapper" translatesAutoresizingMaskIntoConstraints="NO" id="TfY-WI-yfs" userLabel="logoImg">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="67" id="2GP-Kd-utG"/>
                                     <constraint firstAttribute="width" constant="315" id="bi3-tU-JPk"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="How many taps to win?" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fVi-Ys-lir">
-                                <frame key="frameInset" minX="176" minY="382" width="249" height="45"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="How many taps to win?" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fVi-Ys-lir" userLabel="howManyTaps">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="fOq-8c-UmA"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="249" id="jN0-dP-4dV"/>
@@ -37,13 +36,13 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin" translatesAutoresizingMaskIntoConstraints="NO" id="oWV-JV-0lN">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin" translatesAutoresizingMaskIntoConstraints="NO" id="oWV-JV-0lN" userLabel="tapsButton">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="172" id="ZAg-Yb-ZPq"/>
                                     <constraint firstAttribute="height" constant="128" id="co0-x6-Q3v"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 Taps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIg-q2-shM" userLabel="tapsTxt">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 Taps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIg-q2-shM" userLabel="tapsTxt">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="204" id="gXF-qr-I9B"/>
                                     <constraint firstAttribute="height" constant="61" id="yTG-KJ-z8N"/>
@@ -84,12 +83,11 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="600"/>
                     <connections>
-                        <outlet property="howManyTaps" destination="fVi-Ys-lir" id="XFU-2t-OrX"/>
-                        <outlet property="howManyTapsField" destination="fVi-Ys-lir" id="LGZ-eX-VVk"/>
-                        <outlet property="logoImg" destination="TfY-WI-yfs" id="zbY-1t-Rp7"/>
-                        <outlet property="tapLogo" destination="BIg-q2-shM" id="bq7-8W-Nmd"/>
-                        <outlet property="tapsButton" destination="oWV-JV-0lN" id="dJc-6W-CW0"/>
-                        <outlet property="txtField" destination="fVi-Ys-lir" id="1XV-ch-wdU"/>
+                        <outlet property="howManyTaps" destination="fVi-Ys-lir" id="6QS-67-o3J"/>
+                        <outlet property="logoImg" destination="TfY-WI-yfs" id="Oc2-wz-zrJ"/>
+                        <outlet property="playButton" destination="2QH-bD-QnD" id="8NS-VH-Ts3"/>
+                        <outlet property="tapsButton" destination="oWV-JV-0lN" id="Fcx-4x-ndy"/>
+                        <outlet property="tapsTxt" destination="BIg-q2-shM" id="p83-x5-0Vj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
