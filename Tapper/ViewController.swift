@@ -20,8 +20,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var tapsButton: UIImageView!
     @IBOutlet weak var tapLogo: UILabel!
     
+    @IBAction func onPlayBtnPressed(sender: UIButton!) {
+        logoImg.isHidden = true
+        playButton.isHidden = true
+        howManyTapsField.isHidden = true
+        tapLogo.isHidden = false
+        tapsButton.isHidden = false
+    }
     
-
-
 }
+
 

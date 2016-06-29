@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11103.10"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,15 +26,8 @@
                                     <constraint firstAttribute="width" constant="315" id="bi3-tU-JPk"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="playbtn" translatesAutoresizingMaskIntoConstraints="NO" id="dkP-9c-8D0">
-                                <frame key="frameInset" minX="176" minY="441" width="249" height="120"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="249" id="0jK-f1-bzG"/>
-                                    <constraint firstAttribute="height" constant="120" id="Mpk-Ek-Dub"/>
-                                    <constraint firstAttribute="width" constant="249" id="dsd-wc-Y1w"/>
-                                </constraints>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="How many taps to win?" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fVi-Ys-lir">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="How many taps to win?" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fVi-Ys-lir">
+                                <frame key="frameInset" minX="176" minY="382" width="249" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="fOq-8c-UmA"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="249" id="jN0-dP-4dV"/>
@@ -58,21 +52,32 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2QH-bD-QnD" userLabel="playButton">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="249" id="HSP-ob-buX"/>
+                                    <constraint firstAttribute="height" constant="120" id="NYL-H2-gUg"/>
+                                </constraints>
+                                <state key="normal" image="playbtn"/>
+                                <connections>
+                                    <action selector="onPlayBtnPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PAp-aj-mTR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="2QH-bD-QnD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="14U-7u-tjS"/>
                             <constraint firstItem="TfY-WI-yfs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2k4-W6-2Bz"/>
                             <constraint firstItem="oWV-JV-0lN" firstAttribute="top" secondItem="BIg-q2-shM" secondAttribute="bottom" constant="69" id="7YP-TG-zEg"/>
                             <constraint firstItem="lR9-S1-USZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-8" id="96l-7W-XD3"/>
                             <constraint firstItem="fVi-Ys-lir" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AVA-g8-nmq"/>
                             <constraint firstAttribute="bottom" secondItem="lR9-S1-USZ" secondAttribute="bottom" constant="-34" id="FnD-kf-q1V"/>
-                            <constraint firstItem="dkP-9c-8D0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KTi-x0-jd7"/>
                             <constraint firstItem="oWV-JV-0lN" firstAttribute="top" secondItem="TfY-WI-yfs" secondAttribute="bottom" constant="83" id="LgL-7C-pnT"/>
                             <constraint firstItem="BIg-q2-shM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TGA-dL-8Ga"/>
-                            <constraint firstItem="dkP-9c-8D0" firstAttribute="top" secondItem="fVi-Ys-lir" secondAttribute="bottom" constant="16" id="bZ4-wJ-IPt"/>
                             <constraint firstItem="TfY-WI-yfs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="h45-fC-jfp"/>
+                            <constraint firstItem="2QH-bD-QnD" firstAttribute="top" secondItem="fVi-Ys-lir" secondAttribute="bottom" constant="16" id="iTt-gC-eEW"/>
+                            <constraint firstItem="2QH-bD-QnD" firstAttribute="width" secondItem="fVi-Ys-lir" secondAttribute="width" id="iaU-Pp-gNo"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="2QH-bD-QnD" secondAttribute="bottom" constant="30" id="icg-lG-iI4"/>
                             <constraint firstAttribute="trailing" secondItem="lR9-S1-USZ" secondAttribute="trailing" constant="20" symbolic="YES" id="lJy-Jl-MNa"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dkP-9c-8D0" secondAttribute="bottom" constant="37" id="yKd-jj-sjx"/>
                             <constraint firstItem="oWV-JV-0lN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zTx-aH-8mm"/>
                         </constraints>
                     </view>
@@ -80,8 +85,8 @@
                     <size key="freeformSize" width="600" height="600"/>
                     <connections>
                         <outlet property="howManyTaps" destination="fVi-Ys-lir" id="XFU-2t-OrX"/>
+                        <outlet property="howManyTapsField" destination="fVi-Ys-lir" id="LGZ-eX-VVk"/>
                         <outlet property="logoImg" destination="TfY-WI-yfs" id="zbY-1t-Rp7"/>
-                        <outlet property="playButton" destination="dkP-9c-8D0" id="7xn-tz-Efg"/>
                         <outlet property="tapLogo" destination="BIg-q2-shM" id="bq7-8W-Nmd"/>
                         <outlet property="tapsButton" destination="oWV-JV-0lN" id="dJc-6W-CW0"/>
                         <outlet property="txtField" destination="fVi-Ys-lir" id="1XV-ch-wdU"/>
